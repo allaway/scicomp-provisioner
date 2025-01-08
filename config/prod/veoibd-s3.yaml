@@ -5,10 +5,8 @@ template:
   url: "https://{{stack_group_config.admincentral_cf_bucket}}.s3.amazonaws.com/aws-infra/v0.2.7/s3-bucket.yaml"
 stack_name: "veoibd-s3"
 stack_tags:
-  Department: "SysBio"
-  Project: "VEO-IBD"
   OwnerEmail: "thomas.yu@sagebase.org"
-  CostCenter: "NO PROGRAM / 000000"
+  CostCenter: "No Program / 000000"
 parameters:
   # The Sage deparment (Platform, CompOnc, SysBio, Governance, etc..)
   Department: "SysBio"
@@ -34,9 +32,9 @@ parameters:
   # (Optional) 'Enabled' to enable bucket versioning, default is 'Suspended'
   # BucketVersioning: 'Enabled'
   # (Optional) 'Enabled' to enable bucket data life cycle rule, default is 'Disabled'
-  # EnableDataLifeCycle: 'Enabled'
+  EnableDataLifeCycle: "Enabled"
   # (Optional) S3 bucket objects will transition into this storage class: GLACIER(default), DEEP_ARCHIVE, INTELLIGENT_TIERING, STANDARD_IA, ONEZONE_IA
-  # LifecycleDataStorageClass: 'INTELLIGENT_TIERING'
+  LifecycleDataStorageClass: "INTELLIGENT_TIERING"
   # (Optional) Number of days until S3 objects are moved to the LifecycleDataStorageClass, default is 30
   # LifecycleDataTransition: '90'
   # (Optional) Number of days (from creation) when objects are deleted from S3 and LifecycleDataStorageClass, default is 365000
